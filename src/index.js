@@ -8,6 +8,7 @@ import ErrorPage from "./components/Error";
 import SuperHeroes from "./components/SuperHeroes.page";
 import RQSuperHeroes from "./components/RQSuperHeroes.page";
 import HomePage from "./components/Home.page";
+import NewSuperHeroes from "./components/NewSuperHeroes.page";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "rq-super-heroes",
         element: <RQSuperHeroes />,
+      },
+      {
+        path: "new-super-heroes",
+        element: <NewSuperHeroes />,
       },
     ],
   },

@@ -1,11 +1,5 @@
-import { useQuery } from "react-query";
-import axios from "axios";
-import { API_URL } from "../constants";
 import { useState } from "react";
-
-const superHeroesFetcher = () => {
-  return axios.get(`${API_URL}/superheroes`);
-};
+import useSuperHeroesData from "../hooks/useSuperHeroesData";
 
 const RQSuperHeroes = () => {
   const [refetchIntervalValue, setRefetchIntervalValue] = useState(3000);
@@ -17,23 +11,10 @@ const RQSuperHeroes = () => {
     }
   };
 
-  const { isLoading, data, isError, error, isFetching } = useQuery(
-    "super-heroes",
-    superHeroesFetcher,
-    {
-      cacheTime: 3000,
-      staleTime: 3000,
-      refetchOnMount: false,
-      refetchOnWindowFocus: false,
-      refetchInterval: refetchIntervalValue,
-      refetchIntervalInBackground: true,
-      onSuccess: onSuccess,
-      select: (data) => {
-        const superHeroNames = data.data.map((hero) => hero.name);
-        return superHeroNames;
-      },
-    }
-  );
+  const { isLoading, data, isError, error, isFetching } = useSuperHeroesData({
+    refetchIntervalValue,
+    onSuccess,
+  });
   if (isLoading || isFetching) {
     return <div style={{ padding: "10%" }}>Loading...</div>;
   }
