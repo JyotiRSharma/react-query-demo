@@ -14,6 +14,9 @@ const Header = () => {
         <li>
           <Link to="/rq-super-heroes">RQ Super Heroes</Link>
         </li>
+        <li>
+          <Link to="/new-super-heroes">New Super Heroes</Link>
+        </li>
       </ul>
     </nav>
   );
