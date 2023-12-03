@@ -7,9 +7,19 @@ const superHeroesFetcher = () => {
 };
 
 const RQSuperHeroes = () => {
-  const { isLoading, data } = useQuery("super-heroes", superHeroesFetcher);
-  if (isLoading) {
+  const { isLoading, data, isError, error, isFetching } = useQuery("super-heroes", superHeroesFetcher, {
+    cacheTime: 3000,
+    staleTime: 3000,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    refetchInterval: 2000,
+    refetchIntervalInBackground: true
+  });
+  if (isLoading || isFetching) {
     return <div style={{ padding: "10%" }}>Loading...</div>;
+  }
+  if (isError) {
+    return <div style={{ padding: "10%" }}>{error.message}</div>;
   }
   return (
     <div  style={{padding: "10%"}}>
