@@ -9,6 +9,8 @@ import SuperHeroes from "./components/SuperHeroes.page";
 import RQSuperHeroes from "./components/RQSuperHeroes.page";
 import HomePage from "./components/Home.page";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,7 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
     </QueryClientProvider>
   </React.StrictMode>
 );
