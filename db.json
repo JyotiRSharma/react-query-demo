@@ -39,6 +39,21 @@
       "name": "Shazam2",
       "alterEgo": "Jyoti",
       "id": 8
+    },
+    {
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker",
+      "id": 9
+    },
+    {
+      "name": "Spiderman 2",
+      "alterEgo": "Peter Parker",
+      "id": 10
+    },
+    {
+      "name": "Bogeyman",
+      "alterEgo": "Peter Parker",
+      "id": 11
     }
   ]
 }
