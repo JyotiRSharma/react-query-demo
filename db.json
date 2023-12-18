@@ -1,25 +1,44 @@
 {
-    "superheroes": [
-        {
-            "id": 1,
-            "name": "Batman111",
-            "alterEgo": "Bruce Wayne"
-        },
-        {
-            "id": 2,
-            "name": "Superman",
-            "alterEgo": "Clark Kent"
-        },
-        {
-            "id": 3,
-            "name": "Govinda",
-            "alterEgo": "Krishna"
-        },
-        {
-            "id": 4,
-            "name": "Ironman",
-            "alterEgo": "Tony"
-        }
-        
-    ]
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman111",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Govinda",
+      "alterEgo": "Krishna"
+    },
+    {
+      "id": 4,
+      "name": "Ironman",
+      "alterEgo": "Tony"
+    },
+    {
+      "name": "Flash",
+      "alterEgo": "Jyoti",
+      "id": 5
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Jyoti",
+      "id": 6
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Jyoti",
+      "id": 7
+    },
+    {
+      "name": "Shazam2",
+      "alterEgo": "Jyoti",
+      "id": 8
+    }
+  ]
 }

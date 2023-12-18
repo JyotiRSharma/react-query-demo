@@ -11,6 +11,7 @@ import HomePage from "./components/Home.page";
 import NewSuperHeroes from "./components/NewSuperHeroes.page";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import SuperHeroQueryPage from "./components/SuperHeroQuery.page";
 
 
 const queryClient = new QueryClient();
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "new-super-heroes",
         element: <NewSuperHeroes />,
       },
+      {
+        path: 'super-hero-query/:heroId',
+        element: <SuperHeroQueryPage />,
+      }
     ],
   },
 ]);

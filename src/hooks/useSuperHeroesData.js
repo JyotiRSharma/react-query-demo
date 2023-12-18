@@ -15,10 +15,10 @@ const useSuperHeroesData = ({refetchIntervalValue, onSuccess}) => {
     refetchInterval: refetchIntervalValue,
     refetchIntervalInBackground: true,
     onSuccess: onSuccess,
-    select: (data) => {
-      const superHeroNames = data.data.map((hero) => hero.name);
-      return superHeroNames;
-    },
+    // select: (data) => {
+    //   const superHeroNames = data.data.map((hero) => hero.name);
+    //   return superHeroNames;
+    // },
   });
 };
 
